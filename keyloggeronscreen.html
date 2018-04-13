@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KEY-LOG</title>
+</head>
+
+
+
+
+<script>
+
+//on screen keylogger test
+//user type key into txt box & is displayed on screen
+
+function keyLog()
+{
+	var a = document.getElementById("inp");
+	
+	a.onkeypress = function(event)
+	{
+		//converts unicode value into characters
+		document.getElementById("res").innerHTML = "Typed key: " + String.fromCharCode(event.keyCode);
+	}
+		
+}
+</script>	
+	
+
+
+
+
+<body onload="keyLog()">
+Type key: <input type="text" id="inp">
+<p id="res"></p>
+</body>
+
+</html>
+		
